@@ -15,6 +15,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
     background-color: var(--background-color);
     color: var(--text-color);
     position: relative;
@@ -22,7 +23,7 @@ body {
 }
 
 a {
-    color: color: var(--text-color);;
+    color: var(--text-color);
 }
 
 header {
@@ -39,15 +40,27 @@ header::before {
     position: absolute;
     inset: 0;
     background: url("images/gradeBckground.webp") center/cover no-repeat;
-    background-size: 84vw;
+    background-size: 150vw;
     max-width: 2005px;
-    opacity: 0.3;
+    opacity: 0.5;
     z-index: -1;
     margin: 0 auto;
 }
 
 section{
     padding-top: 192px;
+}
+
+@media (min-width: 1024px) {
+    section{
+        padding-top: 244px;
+    }
+}
+
+@media (min-width: 1440px) {
+    header::before {
+        background-size: 84vw;
+    }
 }
 
 /* Fonts styles */
@@ -64,13 +77,20 @@ h1 {
 
 h2{
     font-size: clamp(32px, 9vw, 82px);
+    margin-bottom: 54px;
+}
+
+h3{
+    font-weight: 500;
+    font-size: clamp(22px, 6.7vw, 42px);
+    max-width: 380px;
 }
 
 p{
     text-align: center;
     font-weight: 200;
     line-height: 140%;
-    letter-spacing: 2%;
+    /*letter-spacing: 2%;*/
 }
 
 .paragrapg-1 {
@@ -80,6 +100,39 @@ p{
 
 .paragrapg-2 {
     font-size: clamp(10px, 2.9vw, 22px);
+}
+
+.paragrapg-3, .li-ul{
+    font-size: clamp(14px, 4.3vw, 22px);
+}
+
+.paragrapg-4{
+    font-size: clamp(14px, 4.3vw, 24px); /*ARRUMAR*/
+}
+
+.paragrapg-5{
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    h2{
+        margin-bottom: 84px;
+    }
+    .paragrapg-3{
+        font-size: clamp(22px, 6.5vw, 34px);
+    }
+    .paragrapg-5{
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1024px){
+    h2{
+        margin-bottom: 282px;
+    }
+    .paragrapg-5{
+        font-size: 38px;
+    }
 }
 
 /* Tool Kit */
@@ -106,11 +159,28 @@ p{
     text-align: center;
 }
 
+.flex-column-to-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
 .decore {
     background: url("images/decore.webp") no-repeat;
     padding: 0 14px;
     overflow: visible;
     background-size: 116%;
+}
+
+.decore-smalltxt {
+    background: url("images/decore.webp") no-repeat;
+    padding: 0 14px;
+    padding: 12px 4px;
+    overflow: visible;
+    background-size: 98%;
+    background-position: center;
 }
 
 .btn{
@@ -127,6 +197,12 @@ p{
     text-decoration: none;
     font-weight: 600;
     background-color: var(--first-color);
+}
+
+.round-div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
 @media (min-width: 744px) {
@@ -154,4 +230,320 @@ header .paragrapg-1 {
     font-size: clamp(18px, 5.1vw, 38px);
     font-weight: 700;
     margin-bottom: 8px;
+}
+
+.page-qualitys{
+    background: url('./images/qualitysBackground.webp') no-repeat;
+    background-position: center right;
+}
+
+.quality-icon{
+    width: 16.25vw;
+    min-width: 52px;
+    max-width: 112px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.quality h3{
+    margin: 14px 0 10px 0;
+}
+
+.quality p{
+    min-width: 230px;
+    max-width: 578px;
+}
+
+.quality:nth-of-type(2) {
+    margin: 58px 0;
+}
+
+@media (min-width: 768px) {
+    .quality:nth-of-type(2) {
+        margin: 92px 0;
+    }
+    .page-qualitys{
+        background-size: 60vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .quality:nth-of-type(2) {
+        margin: 142px 0;
+    }
+    .quality-icon{
+        width: 11.25vw;
+        max-width: 112px;
+    }
+}
+
+@media (min-width: 1441px) {
+    .page-qualitys{
+        background: none;
+    }
+
+}
+
+.graph{
+    width: 84.3vw;
+    min-width: 270px;
+    max-width: 588px;
+    height: auto;
+}
+
+.graph-text-container{
+    padding: 0 32px;
+}
+
+.graph-text-container p, .graph-text-container li{
+    text-align: start;
+    max-width: 588px;
+}
+
+.graph-text-container ul{
+    margin: 32px 0 72px 0;
+}
+
+.li-ul{
+    margin-bottom: 14px;
+    margin-left: 24px;
+}
+
+.margin-spacing{
+    margin-right: 22px;
+}
+
+.legend-graph{
+    margin-bottom: 28px;
+}
+
+.page{
+    background-color: #0088F0;
+    margin-right: 8px;
+}
+
+.organic{
+    background-color: #781ECF;
+    margin-right: 8px;
+}
+
+.legend-txt{
+    font-size: clamp(10px, 1.3vw,16px);
+}
+
+.about-header{
+    margin: 8px 0 24px 0;
+}
+
+.about-header h2{
+    display: none;
+}
+
+.about-Photo{
+    width: 84.3vw;
+    max-width: 588px;
+    height: 452px;
+    border-radius: 4px;
+    background-color: #4B4B4B;
+}
+
+.download-cv{
+    font-size: 14px;
+}
+
+.about-text-container p{
+    margin-top: 28px;
+    width: 84.3vw;
+    min-width: 270px;
+    max-width: 588px; 
+    text-align: start;
+} 
+
+.social-netWork{
+    text-decoration: none;
+}
+
+.social-netWork svg{
+    margin-left: 12px;
+    width: 20px;
+    height: auto;
+}
+
+.links-about-container{
+    justify-content: space-between;
+    margin: 24px 0 58px 0;
+}
+
+.about-text-container .btn{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px){
+    .social-netWork svg{
+        margin-left: 12px;
+        width: 30px;
+        height: auto;
+    }
+    .download-cv{
+        font-size: 22px;
+    }
+}
+
+.FAQ h3, .FAQ p{
+    text-align: start;
+}
+
+.FAQ li{
+    cursor: pointer;
+    align-items: start;
+    justify-content: space-between;
+    border-bottom: 1px solid #FFF;
+    padding: 22px 0;
+    margin-bottom: 18px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.FAQ h3{
+    font-size: clamp(16px, 5vw, 44px);
+    max-width: none;
+}
+
+.FAQ p{
+    overflow: hidden;
+    max-height: 0px;
+    font-size: clamp(14px, 4.3vw, 28px);
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+
+@media (min-width: 1024px){
+    .FAQ li{
+        padding: 42px 0;
+    }
+}
+
+.toggle-element.open {
+  max-height: 800px !important; 
+  margin-top: 12px !important;
+}
+
+.FAQ-icon-container svg {
+  width: 10px;
+  height: auto;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  transform: rotate(0deg);
+}
+
+.faq-item.active .FAQ-icon-container svg {
+  transform: rotate(90deg);
+}
+
+.content-FAQ{
+    margin-left: 16px;
+}
+
+@media (min-width: 500px) {
+    .FAQ-icon-container svg {
+        margin-top: 4px;
+        width: 14px;
+    }
+}
+
+@media (min-width: 800px) {
+    .FAQ-icon-container svg {
+        margin-top: 10px;
+    }
+}
+
+.carrossel-container{
+    overflow-x: hidden;
+}
+
+.carrossel{
+    position: relative;
+    justify-content: flex-start;
+    transition: transform 0.5s ease;
+}
+
+.carrossel img{
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#back, #next{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--background-color);
+    opacity: 0.3;
+    height: 100%;
+    width: 25%;
+    animation: pulse 0.8s infinite alternate;
+}
+
+#back{
+    left: 0;
+    border-radius: 0 100% 100% 0;
+}
+
+#back svg{
+    transform: rotate(-180deg);
+}
+
+#next{
+    right: 0;
+    border-radius: 100% 0 0 100%;
+}
+
+@keyframes pulse {
+  0%   { width: 20%; }
+  100% { width: 25%; }
+}
+
+.cta .btn{
+    text-align: center;
+}
+
+.cta-title{
+    margin-bottom: 0;
+}
+
+.cta-paragrath{
+    margin: 28px 0 48px 0;
+}
+
+footer{
+    margin-top: 100px;
+}
+
+.footer-container{
+    padding: 28px 0 62px 0;
+    width: 88.75vw;
+    max-width: 1120px;
+    border-top: 1px solid #ffffff;
+}
+
+.author-paragrath{
+    margin: 14px 0 4px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.email-paragrath{
+    font-size: 16px;
+    font: 100;
+}
+
+@media (min-width: 1024px){
+    footer{
+        margin-top: 174px;
+    }
+    .cta-paragrath{
+        margin: 38px 0 58px 0;
+    }
 }
