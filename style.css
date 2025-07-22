@@ -8,6 +8,10 @@
     --shadow-color: #0D0714;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -460,6 +464,7 @@ header .paragrapg-1 {
 
 .carrossel-container{
     overflow-x: hidden;
+    position: relative;
 }
 
 .carrossel{
@@ -481,6 +486,8 @@ header .paragrapg-1 {
     position: absolute;
     background-color: var(--background-color);
     opacity: 0.3;
+    top: 0;
+    z-index: 9999;
     height: 100%;
     width: 25%;
     animation: pulse 0.8s infinite alternate;
@@ -545,5 +552,51 @@ footer{
     }
     .cta-paragrath{
         margin: 38px 0 58px 0;
+    }
+}
+
+/* animations view */
+
+.animate-1-faster{
+    Animation: apper cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+.animate-1{
+    Animation: apper cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.animate-2-faster{
+    Animation: apper-2 cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+.animate-2{
+    Animation: apper-2 cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timeline: view();
+    animation-range: entry 0% cover 55%;
+}
+
+@keyframes apper {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes apper-2 {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }to{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
