@@ -80,7 +80,7 @@ h1 {
 }
 
 h2{
-    font-size: clamp(32px, 9vw, 82px);
+    font-size: clamp(32px, 9vw, 72px);
     margin-bottom: 54px;
 }
 
@@ -132,7 +132,7 @@ p{
 
 @media (min-width: 1024px){
     h2{
-        margin-bottom: 282px;
+        margin-bottom: 260px;
     }
     .paragrapg-5{
         font-size: 38px;
