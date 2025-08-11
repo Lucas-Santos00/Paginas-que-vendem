@@ -35,5 +35,5 @@ O foco foi manter a página **leve, responsiva e objetiva**, transmitindo de for
 ├── index.html        # Página principal
 ├── style.css         # Estilos
 ├── script.js         # Lógica e interações
-├── assets/           # Imagens e ícones
+├── images/           # Imagens e ícones
 └── README.md
