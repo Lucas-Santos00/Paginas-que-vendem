@@ -10,6 +10,8 @@ Todo o **design** e **codificação** foram feitos por mim, com o objetivo de cr
 
 O foco foi manter a página **leve, responsiva e objetiva**, transmitindo de forma clara quem sou e o que faço.
 
+**[Live demo](https://lucas-santos00.github.io/Paginas-que-vendem/)**
+
 ---
 
 ## 🚀 Tecnologias Utilizadas
